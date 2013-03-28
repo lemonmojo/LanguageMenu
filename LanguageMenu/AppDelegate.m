@@ -87,12 +87,12 @@
     item = [[NSMenuItem alloc] initWithTitle:@"Preferences..." action:@selector(statusMenuItemPreferences_Action:) keyEquivalent:@""];
     [menu addItem:item];
     
-    item = [[NSMenuItem alloc] initWithTitle:@"About LanguageSwitcher" action:@selector(statusMenuItemAbout_Action:) keyEquivalent:@""];
+    item = [[NSMenuItem alloc] initWithTitle:@"About LanguageMenu" action:@selector(statusMenuItemAbout_Action:) keyEquivalent:@""];
     [menu addItem:item];
     
     [menu addItem:[NSMenuItem separatorItem]];
     
-    item = [[NSMenuItem alloc] initWithTitle:@"Quit LanguageSwitcher" action:@selector(statusMenuItemQuit_Action:) keyEquivalent:@""];
+    item = [[NSMenuItem alloc] initWithTitle:@"Quit LanguageMenu" action:@selector(statusMenuItemQuit_Action:) keyEquivalent:@""];
     [menu addItem:item];
 }
 
