@@ -10,6 +10,7 @@
 		E77E946117045F03006D4AD7 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E77E946017045F03006D4AD7 /* Icon.icns */; };
 		E7B8D9E717011DFA00064048 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8D9E617011DFA00064048 /* Cocoa.framework */; };
 		E7B8E023170135E900064048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8E022170135E900064048 /* Carbon.framework */; };
+		E7BEBAC31704A4C500CC2F32 /* NSImage+ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BEBAC21704A4C500CC2F32 /* NSImage+ImageUtils.m */; };
 		E7E3F01B170455930055163E /* language_mappings.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F018170455930055163E /* language_mappings.txt */; };
 		E7E3F01C170455930055163E /* TEMP_KEYLAYOUTS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */; };
 		E7E3F01D170455930055163E /* TEMP_LANGS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F01A170455930055163E /* TEMP_LANGS.txt */; };
@@ -30,6 +31,8 @@
 		E7B8D9EA17011DFA00064048 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E7B8D9EB17011DFA00064048 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7B8E022170135E900064048 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		E7BEBAC11704A4C500CC2F32 /* NSImage+ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImage+ImageUtils.h"; path = "LanguageMenu/NSImage+ImageUtils.h"; sourceTree = SOURCE_ROOT; };
+		E7BEBAC21704A4C500CC2F32 /* NSImage+ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImage+ImageUtils.m"; path = "LanguageMenu/NSImage+ImageUtils.m"; sourceTree = SOURCE_ROOT; };
 		E7E3F018170455930055163E /* language_mappings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = language_mappings.txt; path = LanguageMenu/Resources/language_mappings.txt; sourceTree = SOURCE_ROOT; };
 		E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TEMP_KEYLAYOUTS.txt; path = LanguageMenu/Resources/TEMP_KEYLAYOUTS.txt; sourceTree = SOURCE_ROOT; };
 		E7E3F01A170455930055163E /* TEMP_LANGS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TEMP_LANGS.txt; path = LanguageMenu/Resources/TEMP_LANGS.txt; sourceTree = SOURCE_ROOT; };
@@ -96,6 +99,8 @@
 				E7E3F029170455C40055163E /* AppDelegate.m */,
 				E7E3F02A170455C40055163E /* LMLanguage.h */,
 				E7E3F02B170455C40055163E /* LMLanguage.m */,
+				E7BEBAC11704A4C500CC2F32 /* NSImage+ImageUtils.h */,
+				E7BEBAC21704A4C500CC2F32 /* NSImage+ImageUtils.m */,
 				E7B8DA031701210800064048 /* Resources */,
 				E7B8D9ED17011DFA00064048 /* Supporting Files */,
 			);
@@ -201,6 +206,7 @@
 				E7E3F02E1704560F0055163E /* main.m in Sources */,
 				E7E3F02C170455DE0055163E /* AppDelegate.m in Sources */,
 				E7E3F02D170455DF0055163E /* LMLanguage.m in Sources */,
+				E7BEBAC31704A4C500CC2F32 /* NSImage+ImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

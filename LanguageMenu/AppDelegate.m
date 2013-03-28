@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LMLanguage.h"
+#import "NSImage+ImageUtils.h"
 
 @implementation AppDelegate
 
@@ -47,7 +48,10 @@
     
     LMLanguage* currentLanguage = [languages objectAtIndex:0];
     
-    NSImage* icon = [currentLanguage icon];
+    NSImage* icon = nil;
+    
+    if ([currentLanguage icon])
+        icon = [[currentLanguage icon] resizedImageForSize:NSMakeSize(18, 18)];
     
     if (icon) {
         [statusItem setLength:NSSquareStatusItemLength];
@@ -74,7 +78,14 @@
     for (LMLanguage* language in languages) {
         item = [[NSMenuItem alloc] initWithTitle:language.languageName action:@selector(statusMenuItemLanguage_Action:) keyEquivalent:@""];
         [item setRepresentedObject:language];
-        [item setImage:[language icon]];
+        
+        NSImage* icon = nil;
+        
+        if ([language icon])
+            icon = [[language icon] resizedImageForSize:NSMakeSize(18, 18)];
+        
+        if (icon)
+            [item setImage:icon];
         
         if ([language isActive])
             [item setState:NSOnState];
@@ -96,21 +107,25 @@
     [menu addItem:item];
 }
 
-- (void)statusMenuItemLanguage_Action:(NSMenuItem*)sender {
+- (void)statusMenuItemLanguage_Action:(NSMenuItem*)sender
+{
     LMLanguage* language = [sender representedObject];
     
     [language makeActive];
 }
 
-- (void)statusMenuItemPreferences_Action:(NSMenuItem*)sender {
+- (void)statusMenuItemPreferences_Action:(NSMenuItem*)sender
+{
     
 }
 
-- (void)statusMenuItemAbout_Action:(NSMenuItem*)sender {
+- (void)statusMenuItemAbout_Action:(NSMenuItem*)sender
+{
     [NSApp orderFrontStandardAboutPanel:self];
 }
 
-- (void)statusMenuItemQuit_Action:(NSMenuItem*)sender {
+- (void)statusMenuItemQuit_Action:(NSMenuItem*)sender
+{
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 
