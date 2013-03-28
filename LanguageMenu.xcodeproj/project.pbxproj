@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7B8D9E717011DFA00064048 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8D9E617011DFA00064048 /* Cocoa.framework */; };
+		E7B8E023170135E900064048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8E022170135E900064048 /* Carbon.framework */; };
+		E7E3F01B170455930055163E /* language_mappings.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F018170455930055163E /* language_mappings.txt */; };
+		E7E3F01C170455930055163E /* TEMP_KEYLAYOUTS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */; };
+		E7E3F01D170455930055163E /* TEMP_LANGS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F01A170455930055163E /* TEMP_LANGS.txt */; };
+		E7E3F0201704559C0055163E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F01E1704559C0055163E /* Credits.rtf */; };
+		E7E3F023170455A10055163E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F021170455A10055163E /* MainMenu.xib */; };
+		E7E3F02C170455DE0055163E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F029170455C40055163E /* AppDelegate.m */; };
+		E7E3F02D170455DF0055163E /* LMLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F02B170455C40055163E /* LMLanguage.m */; };
+		E7E3F02E1704560F0055163E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F027170455B50055163E /* main.m */; };
+		E7E3F0311704586B0055163E /* License in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F0301704586B0055163E /* License */; };
+		E7E3F033170459320055163E /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F032170459320055163E /* Readme.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E7B8D9E317011DFA00064048 /* LanguageMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B8D9E617011DFA00064048 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E7B8D9E917011DFA00064048 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E7B8D9EA17011DFA00064048 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E7B8D9EB17011DFA00064048 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7B8E022170135E900064048 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		E7E3F018170455930055163E /* language_mappings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = language_mappings.txt; path = LanguageMenu/Resources/language_mappings.txt; sourceTree = SOURCE_ROOT; };
+		E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TEMP_KEYLAYOUTS.txt; path = LanguageMenu/Resources/TEMP_KEYLAYOUTS.txt; sourceTree = SOURCE_ROOT; };
+		E7E3F01A170455930055163E /* TEMP_LANGS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TEMP_LANGS.txt; path = LanguageMenu/Resources/TEMP_LANGS.txt; sourceTree = SOURCE_ROOT; };
+		E7E3F01F1704559C0055163E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = LanguageMenu/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		E7E3F022170455A10055163E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = LanguageMenu/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		E7E3F024170455B50055163E /* LanguageMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LanguageMenu-Info.plist"; path = "LanguageMenu/LanguageMenu-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E7E3F025170455B50055163E /* LanguageMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LanguageMenu-Prefix.pch"; path = "LanguageMenu/LanguageMenu-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E7E3F026170455B50055163E /* LanguageMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LanguageMenu.entitlements; path = LanguageMenu/LanguageMenu.entitlements; sourceTree = SOURCE_ROOT; };
+		E7E3F027170455B50055163E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LanguageMenu/main.m; sourceTree = SOURCE_ROOT; };
+		E7E3F028170455C40055163E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LanguageMenu/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E7E3F029170455C40055163E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LanguageMenu/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E7E3F02A170455C40055163E /* LMLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LMLanguage.h; path = LanguageMenu/LMLanguage.h; sourceTree = SOURCE_ROOT; };
+		E7E3F02B170455C40055163E /* LMLanguage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LMLanguage.m; path = LanguageMenu/LMLanguage.m; sourceTree = SOURCE_ROOT; };
+		E7E3F0301704586B0055163E /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = SOURCE_ROOT; };
+		E7E3F032170459320055163E /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7B8D9E017011DFA00064048 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B8E023170135E900064048 /* Carbon.framework in Frameworks */,
+				E7B8D9E717011DFA00064048 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7B8D9DA17011DFA00064048 = {
+			isa = PBXGroup;
+			children = (
+				E7B8D9EC17011DFA00064048 /* LanguageMenu */,
+				E7B8D9E517011DFA00064048 /* Frameworks */,
+				E7B8D9E417011DFA00064048 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7B8D9E417011DFA00064048 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7B8D9E317011DFA00064048 /* LanguageMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7B8D9E517011DFA00064048 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7B8D9EB17011DFA00064048 /* Foundation.framework */,
+				E7B8D9EA17011DFA00064048 /* CoreData.framework */,
+				E7B8D9E917011DFA00064048 /* AppKit.framework */,
+				E7B8E022170135E900064048 /* Carbon.framework */,
+				E7B8D9E617011DFA00064048 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7B8D9EC17011DFA00064048 /* LanguageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3F028170455C40055163E /* AppDelegate.h */,
+				E7E3F029170455C40055163E /* AppDelegate.m */,
+				E7E3F02A170455C40055163E /* LMLanguage.h */,
+				E7E3F02B170455C40055163E /* LMLanguage.m */,
+				E7B8DA031701210800064048 /* Resources */,
+				E7B8D9ED17011DFA00064048 /* Supporting Files */,
+			);
+			name = LanguageMenu;
+			path = LanguageSwitcher;
+			sourceTree = "<group>";
+		};
+		E7B8D9ED17011DFA00064048 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3F024170455B50055163E /* LanguageMenu-Info.plist */,
+				E7E3F025170455B50055163E /* LanguageMenu-Prefix.pch */,
+				E7E3F026170455B50055163E /* LanguageMenu.entitlements */,
+				E7E3F027170455B50055163E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7B8DA031701210800064048 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3F0301704586B0055163E /* License */,
+				E7E3F032170459320055163E /* Readme.md */,
+				E7E3F021170455A10055163E /* MainMenu.xib */,
+				E7E3F01E1704559C0055163E /* Credits.rtf */,
+				E7E3F018170455930055163E /* language_mappings.txt */,
+				E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */,
+				E7E3F01A170455930055163E /* TEMP_LANGS.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7B8D9E217011DFA00064048 /* LanguageMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B8DA0017011DFA00064048 /* Build configuration list for PBXNativeTarget "LanguageMenu" */;
+			buildPhases = (
+				E7B8D9DF17011DFA00064048 /* Sources */,
+				E7B8D9E017011DFA00064048 /* Frameworks */,
+				E7B8D9E117011DFA00064048 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LanguageMenu;
+			productName = LanguageSwitcher;
+			productReference = E7B8D9E317011DFA00064048 /* LanguageMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7B8D9DB17011DFA00064048 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Lemon Mojo";
+			};
+			buildConfigurationList = E7B8D9DE17011DFA00064048 /* Build configuration list for PBXProject "LanguageMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E7B8D9DA17011DFA00064048;
+			productRefGroup = E7B8D9E417011DFA00064048 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7B8D9E217011DFA00064048 /* LanguageMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7B8D9E117011DFA00064048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E3F01B170455930055163E /* language_mappings.txt in Resources */,
+				E7E3F01C170455930055163E /* TEMP_KEYLAYOUTS.txt in Resources */,
+				E7E3F01D170455930055163E /* TEMP_LANGS.txt in Resources */,
+				E7E3F0201704559C0055163E /* Credits.rtf in Resources */,
+				E7E3F023170455A10055163E /* MainMenu.xib in Resources */,
+				E7E3F0311704586B0055163E /* License in Resources */,
+				E7E3F033170459320055163E /* Readme.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7B8D9DF17011DFA00064048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E3F02E1704560F0055163E /* main.m in Sources */,
+				E7E3F02C170455DE0055163E /* AppDelegate.m in Sources */,
+				E7E3F02D170455DF0055163E /* LMLanguage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E7E3F01E1704559C0055163E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7E3F01F1704559C0055163E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E7E3F021170455A10055163E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7E3F022170455A10055163E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7B8D9FE17011DFA00064048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E7B8D9FF17011DFA00064048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E7B8DA0117011DFA00064048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LanguageMenu/LanguageMenu-Prefix.pch";
+				INFOPLIST_FILE = "LanguageMenu/LanguageMenu-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = LanguageMenu;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E7B8DA0217011DFA00064048 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LanguageMenu/LanguageMenu-Prefix.pch";
+				INFOPLIST_FILE = "LanguageMenu/LanguageMenu-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = LanguageMenu;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7B8D9DE17011DFA00064048 /* Build configuration list for PBXProject "LanguageMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B8D9FE17011DFA00064048 /* Debug */,
+				E7B8D9FF17011DFA00064048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B8DA0017011DFA00064048 /* Build configuration list for PBXNativeTarget "LanguageMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B8DA0117011DFA00064048 /* Debug */,
+				E7B8DA0217011DFA00064048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7B8D9DB17011DFA00064048 /* Project object */;
+}
