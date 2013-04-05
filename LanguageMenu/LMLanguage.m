@@ -54,7 +54,7 @@
     NSDictionary* globalDomain = [defaults persistentDomainForName:@"NSGlobalDomain"];
     NSArray* appleLanguages = [globalDomain objectForKey:@"AppleLanguages"];
     
-    NSLog(@"%@", appleLanguages.description);
+    //NSLog(@"%@", appleLanguages.description);
     
     return appleLanguages;
 }
