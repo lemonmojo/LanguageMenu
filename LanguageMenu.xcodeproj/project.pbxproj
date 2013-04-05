@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E723048D170F3C1B0086D5BD /* LMSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = E723048C170F3C1B0086D5BD /* LMSettings.m */; };
 		E77E946117045F03006D4AD7 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E77E946017045F03006D4AD7 /* Icon.icns */; };
 		E7B8D9E717011DFA00064048 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8D9E617011DFA00064048 /* Cocoa.framework */; };
 		E7B8E023170135E900064048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8E022170135E900064048 /* Carbon.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E723048B170F3C1B0086D5BD /* LMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSettings.h; path = LanguageMenu/LMSettings.h; sourceTree = SOURCE_ROOT; };
+		E723048C170F3C1B0086D5BD /* LMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSettings.m; path = LanguageMenu/LMSettings.m; sourceTree = SOURCE_ROOT; };
 		E77E946017045F03006D4AD7 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon.icns; path = LanguageMenu/Resources/Icon.icns; sourceTree = SOURCE_ROOT; };
 		E7B8D9E317011DFA00064048 /* LanguageMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B8D9E617011DFA00064048 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -99,6 +102,8 @@
 				E7E3F029170455C40055163E /* AppDelegate.m */,
 				E7E3F02A170455C40055163E /* LMLanguage.h */,
 				E7E3F02B170455C40055163E /* LMLanguage.m */,
+				E723048B170F3C1B0086D5BD /* LMSettings.h */,
+				E723048C170F3C1B0086D5BD /* LMSettings.m */,
 				E7BEBAC11704A4C500CC2F32 /* NSImage+ImageUtils.h */,
 				E7BEBAC21704A4C500CC2F32 /* NSImage+ImageUtils.m */,
 				E7B8DA031701210800064048 /* Resources */,
@@ -207,6 +212,7 @@
 				E7E3F02C170455DE0055163E /* AppDelegate.m in Sources */,
 				E7E3F02D170455DF0055163E /* LMLanguage.m in Sources */,
 				E7BEBAC31704A4C500CC2F32 /* NSImage+ImageUtils.m in Sources */,
+				E723048D170F3C1B0086D5BD /* LMSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

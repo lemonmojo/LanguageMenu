@@ -8,19 +8,22 @@
 
 #import "AppDelegate.h"
 #import "LMLanguage.h"
+#import "LMSettings.h"
 #import "NSImage+ImageUtils.h"
 
 @implementation AppDelegate
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [LMSettings removeDefaultsObserver:self];
     
     [super dealloc];
 }
 
 - (void)awakeFromNib
 {
+    [LMSettings addDefaultsObserver:self selector:@selector(defaultsChanged:)];
+    
     statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
     [statusItem setMenu:statusMenu];
     [statusItem setHighlightMode:YES];
@@ -29,12 +32,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [self updateStatusItem];
-    
-    [[NSNotificationCenter defaultCenter]
-     addObserver:self
-     selector:@selector(defaultsChanged:)
-     name:NSUserDefaultsDidChangeNotification
-     object:nil];
 }
 
 - (void)defaultsChanged:(NSNotification*)aNotification
@@ -50,17 +47,23 @@
     
     NSImage* icon = nil;
     
-    if ([currentLanguage icon])
+    if ([LMSettings showCountryFlag] &&
+        [currentLanguage icon])
         icon = [[currentLanguage icon] resizedImageForSize:NSMakeSize(18, 18)];
     
-    if (icon) {
+    if ([LMSettings showCountryFlag] &&
+        icon) {
         [statusItem setLength:NSSquareStatusItemLength];
         [statusItem setImage:icon];
         [statusItem setTitle:@""];
-    } else {
+    }
+    
+    if (!icon || [LMSettings showLanguageName]) {
         [statusItem setLength:NSVariableStatusItemLength];
-        [statusItem setImage:nil];
         [statusItem setTitle:[currentLanguage languageName]];
+        
+        if (!icon)
+            [statusItem setImage:nil];
     }
 }
 
@@ -91,20 +94,39 @@
             [item setState:NSOnState];
         
         [menu addItem:item];
+        [item release];
     }
     
     [menu addItem:[NSMenuItem separatorItem]];
     
-    item = [[NSMenuItem alloc] initWithTitle:@"Preferences..." action:@selector(statusMenuItemPreferences_Action:) keyEquivalent:@""];
+    NSMenu* prefsMenu = [[NSMenu alloc] initWithTitle:@"Preferences"];
+    
+    item = [[NSMenuItem alloc] initWithTitle:@"Show Country Flag" action:@selector(statusMenuItemPreferencesShowCountryFlag_Action:) keyEquivalent:@""];
+    [item setState:[LMSettings showCountryFlag]];
+    [prefsMenu addItem:item];
+    [item release];
+    
+    item = [[NSMenuItem alloc] initWithTitle:@"Show Language Name" action:@selector(statusMenuItemPreferencesShowName_Action:) keyEquivalent:@""];
+    [item setState:[LMSettings showLanguageName]];
+    [prefsMenu addItem:item];
+    [item release];
+    
+    item = [[NSMenuItem alloc] initWithTitle:@"Preferences" action:nil keyEquivalent:@""];
+    [item setSubmenu:prefsMenu];
+    [prefsMenu release];
+    
     [menu addItem:item];
+    [item release];
     
     item = [[NSMenuItem alloc] initWithTitle:@"About LanguageMenu" action:@selector(statusMenuItemAbout_Action:) keyEquivalent:@""];
     [menu addItem:item];
+    [item release];
     
     [menu addItem:[NSMenuItem separatorItem]];
     
     item = [[NSMenuItem alloc] initWithTitle:@"Quit LanguageMenu" action:@selector(statusMenuItemQuit_Action:) keyEquivalent:@""];
     [menu addItem:item];
+    [item release];
 }
 
 - (void)statusMenuItemLanguage_Action:(NSMenuItem*)sender
@@ -112,11 +134,6 @@
     LMLanguage* language = [sender representedObject];
     
     [language makeActive];
-}
-
-- (void)statusMenuItemPreferences_Action:(NSMenuItem*)sender
-{
-    
 }
 
 - (void)statusMenuItemAbout_Action:(NSMenuItem*)sender
@@ -127,6 +144,16 @@
 - (void)statusMenuItemQuit_Action:(NSMenuItem*)sender
 {
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
+}
+
+- (void)statusMenuItemPreferencesShowCountryFlag_Action:(NSMenuItem*)sender
+{
+    [LMSettings toggleShowCountryFlag];
+}
+
+- (void)statusMenuItemPreferencesShowName_Action:(NSMenuItem*)sender
+{
+    [LMSettings toggleShowLanguageName];
 }
 
 @end
