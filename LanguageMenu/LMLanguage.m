@@ -148,10 +148,9 @@
 - (NSImage*)icon
 {
     NSDictionary* mappings = [LMLanguage languageInputSourceMappings];
+    NSString* inSrcId = [mappings valueForKey:self.canonicalLanguageIdentifier];
     
     NSImage* img = nil;
-    
-    NSString* inSrcId = [mappings valueForKey:self.canonicalLanguageIdentifier];
     
     if (inSrcId &&
         ![inSrcId isEqualToString:@""]) {
