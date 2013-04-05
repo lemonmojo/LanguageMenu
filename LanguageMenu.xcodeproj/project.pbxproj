@@ -61,7 +61,6 @@
 		E7027FD9170F48A30012F7C2 /* VA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VA.png; path = LanguageMenu/Resources/Flags/VA.png; sourceTree = SOURCE_ROOT; };
 		E7027FDA170F48A30012F7C2 /* VU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VU.png; path = LanguageMenu/Resources/Flags/VU.png; sourceTree = SOURCE_ROOT; };
 		E7027FEB170F491B0012F7C2 /* RH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RH.png; path = LanguageMenu/Resources/Flags/RH.png; sourceTree = SOURCE_ROOT; };
-		E7028015170F56A20012F7C2 /* LanguageMenu copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LanguageMenu copy-Info.plist"; path = "/Users/fx/Development/Xcode/LanguageMenu/LanguageMenu copy-Info.plist"; sourceTree = "<absolute>"; };
 		E723048B170F3C1B0086D5BD /* LMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSettings.h; path = LanguageMenu/LMSettings.h; sourceTree = SOURCE_ROOT; };
 		E723048C170F3C1B0086D5BD /* LMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSettings.m; path = LanguageMenu/LMSettings.m; sourceTree = SOURCE_ROOT; };
 		E77E946017045F03006D4AD7 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon.icns; path = LanguageMenu/Resources/Icon.icns; sourceTree = SOURCE_ROOT; };
@@ -135,7 +134,6 @@
 				E7B8D9EC17011DFA00064048 /* LanguageMenu */,
 				E7B8D9E517011DFA00064048 /* Frameworks */,
 				E7B8D9E417011DFA00064048 /* Products */,
-				E7028015170F56A20012F7C2 /* LanguageMenu copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
