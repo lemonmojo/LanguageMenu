@@ -111,6 +111,12 @@
     [prefsMenu addItem:item];
     [item release];
     
+    [prefsMenu addItem:[NSMenuItem separatorItem]];
+    
+    item = [[NSMenuItem alloc] initWithTitle:@"System Preferences" action:@selector(statusMenuItemPreferencesSystemPreferences_Action:) keyEquivalent:@""];
+    [prefsMenu addItem:item];
+    [item release];
+    
     item = [[NSMenuItem alloc] initWithTitle:@"Preferences" action:nil keyEquivalent:@""];
     [item setSubmenu:prefsMenu];
     [prefsMenu release];
@@ -154,6 +160,11 @@
 - (void)statusMenuItemPreferencesShowName_Action:(NSMenuItem*)sender
 {
     [LMSettings toggleShowLanguageName];
+}
+
+- (void)statusMenuItemPreferencesSystemPreferences_Action:(NSMenuItem*)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL fileURLWithPath:@"/System/Library/PreferencePanes/Localization.prefPane"]];
 }
 
 @end
