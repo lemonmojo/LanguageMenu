@@ -30,15 +30,12 @@
 		E7B8E023170135E900064048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B8E022170135E900064048 /* Carbon.framework */; };
 		E7BEBAC31704A4C500CC2F32 /* NSImage+ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BEBAC21704A4C500CC2F32 /* NSImage+ImageUtils.m */; };
 		E7E3F01B170455930055163E /* language_mappings.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F018170455930055163E /* language_mappings.txt */; };
-		E7E3F01C170455930055163E /* TEMP_KEYLAYOUTS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */; };
-		E7E3F01D170455930055163E /* TEMP_LANGS.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F01A170455930055163E /* TEMP_LANGS.txt */; };
 		E7E3F0201704559C0055163E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F01E1704559C0055163E /* Credits.rtf */; };
 		E7E3F023170455A10055163E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F021170455A10055163E /* MainMenu.xib */; };
 		E7E3F02C170455DE0055163E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F029170455C40055163E /* AppDelegate.m */; };
 		E7E3F02D170455DF0055163E /* LMLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F02B170455C40055163E /* LMLanguage.m */; };
 		E7E3F02E1704560F0055163E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F027170455B50055163E /* main.m */; };
 		E7E3F0311704586B0055163E /* License in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F0301704586B0055163E /* License */; };
-		E7E3F033170459320055163E /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F032170459320055163E /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +61,9 @@
 		E723048B170F3C1B0086D5BD /* LMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSettings.h; path = LanguageMenu/LMSettings.h; sourceTree = SOURCE_ROOT; };
 		E723048C170F3C1B0086D5BD /* LMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSettings.m; path = LanguageMenu/LMSettings.m; sourceTree = SOURCE_ROOT; };
 		E77E946017045F03006D4AD7 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon.icns; path = LanguageMenu/Resources/Icon.icns; sourceTree = SOURCE_ROOT; };
+		E79B11FE173CF11C001DED3A /* DmgBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DmgBackground.png; path = LanguageMenu/Resources/DmgBackground.png; sourceTree = SOURCE_ROOT; };
+		E79B1202173CF27E001DED3A /* Disk Image */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Disk Image"; sourceTree = "<group>"; };
+		E79B1204173CF27E001DED3A /* Preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Preview.jpg; sourceTree = "<group>"; };
 		E7B8D9E317011DFA00064048 /* LanguageMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B8D9E617011DFA00064048 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E7B8D9E917011DFA00064048 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -126,6 +126,32 @@
 				E7027FC6170F44640012F7C2 /* ID.png */,
 			);
 			name = Flags;
+			sourceTree = "<group>";
+		};
+		E79B1200173CF27E001DED3A /* DmgCanvasTemplate.dmgCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				E79B1201173CF27E001DED3A /* Contents */,
+				E79B1202173CF27E001DED3A /* Disk Image */,
+				E79B1203173CF27E001DED3A /* QuickLook */,
+			);
+			name = DmgCanvasTemplate.dmgCanvas;
+			path = LanguageMenu/Resources/DmgCanvasTemplate.dmgCanvas;
+			sourceTree = SOURCE_ROOT;
+		};
+		E79B1201173CF27E001DED3A /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		E79B1203173CF27E001DED3A /* QuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				E79B1204173CF27E001DED3A /* Preview.jpg */,
+			);
+			path = QuickLook;
 			sourceTree = "<group>";
 		};
 		E7B8D9DA17011DFA00064048 = {
@@ -196,6 +222,8 @@
 				E7E3F021170455A10055163E /* MainMenu.xib */,
 				E7E3F01E1704559C0055163E /* Credits.rtf */,
 				E7E3F018170455930055163E /* language_mappings.txt */,
+				E79B11FE173CF11C001DED3A /* DmgBackground.png */,
+				E79B1200173CF27E001DED3A /* DmgCanvasTemplate.dmgCanvas */,
 				E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */,
 				E7E3F01A170455930055163E /* TEMP_LANGS.txt */,
 			);
@@ -212,6 +240,7 @@
 				E7B8D9DF17011DFA00064048 /* Sources */,
 				E7B8D9E017011DFA00064048 /* Frameworks */,
 				E7B8D9E117011DFA00064048 /* Resources */,
+				E79B1207173CF306001DED3A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,12 +283,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E3F01B170455930055163E /* language_mappings.txt in Resources */,
-				E7E3F01C170455930055163E /* TEMP_KEYLAYOUTS.txt in Resources */,
-				E7E3F01D170455930055163E /* TEMP_LANGS.txt in Resources */,
 				E7E3F0201704559C0055163E /* Credits.rtf in Resources */,
 				E7E3F023170455A10055163E /* MainMenu.xib in Resources */,
 				E7E3F0311704586B0055163E /* License in Resources */,
-				E7E3F033170459320055163E /* Readme.md in Resources */,
 				E77E946117045F03006D4AD7 /* Icon.icns in Resources */,
 				E7027FDB170F48A30012F7C2 /* AL.png in Resources */,
 				E7027FDC170F48A30012F7C2 /* BA.png in Resources */,
@@ -282,6 +308,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E79B1207173CF306001DED3A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/local/bin/dmgcanvas $SRCROOT/LanguageMenu/Resources/DmgCanvasTemplate.dmgCanvas $TARGET_BUILD_DIR/$PRODUCT_NAME.dmg";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7B8D9DF17011DFA00064048 /* Sources */ = {
