@@ -150,6 +150,7 @@
 - (void)statusMenuItemAbout_Action:(NSMenuItem*)sender
 {
     [NSApp orderFrontStandardAboutPanel:self];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void)statusMenuItemQuit_Action:(NSMenuItem*)sender
