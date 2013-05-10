@@ -113,6 +113,11 @@
     
     [prefsMenu addItem:[NSMenuItem separatorItem]];
     
+    item = [[NSMenuItem alloc] initWithTitle:@"Start LanguageMenu at Login" action:@selector(statusMenuItemPreferencesStartAtLogin_Action:) keyEquivalent:@""];
+    [item setState:[LMSettings startAtLogin]];
+    [prefsMenu addItem:item];
+    [item release];
+    
     item = [[NSMenuItem alloc] initWithTitle:@"System Preferences" action:@selector(statusMenuItemPreferencesSystemPreferences_Action:) keyEquivalent:@""];
     [prefsMenu addItem:item];
     [item release];
@@ -160,6 +165,11 @@
 - (void)statusMenuItemPreferencesShowName_Action:(NSMenuItem*)sender
 {
     [LMSettings toggleShowLanguageName];
+}
+
+- (void)statusMenuItemPreferencesStartAtLogin_Action:(NSMenuItem*)sender
+{
+    [LMSettings toggleStartAtLogin];
 }
 
 - (void)statusMenuItemPreferencesSystemPreferences_Action:(NSMenuItem*)sender

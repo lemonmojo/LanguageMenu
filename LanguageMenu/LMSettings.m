@@ -59,4 +59,74 @@
     [LMSettings setShowLanguageName:![LMSettings showLanguageName]];
 }
 
++ (BOOL)startAtLogin
+{
+    NSString* appPath = [[NSBundle mainBundle] bundlePath];
+	CFURLRef appUrl = (CFURLRef)[NSURL fileURLWithPath:appPath];
+	
+    LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    
+	if (loginItems) {
+		UInt32 seedValue;
+		NSArray* loginItemsArray = (NSArray*)LSSharedFileListCopySnapshot(loginItems, &seedValue);
+        
+		for(int i = 0; i < [loginItemsArray count]; i++){
+			LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)[loginItemsArray objectAtIndex:i];
+            
+			if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &appUrl, NULL) == noErr) {
+				NSString * urlPath = [(NSURL*)appUrl path];
+                
+				if ([urlPath compare:appPath] == NSOrderedSame)
+                    return YES;
+			}
+		}
+        
+		[loginItemsArray release];
+	}
+    
+    CFRelease(loginItems);
+    
+    return NO;
+}
+
++ (void)setStartAtLogin:(BOOL)value
+{
+    NSString* appPath = [[NSBundle mainBundle] bundlePath];
+	CFURLRef appUrl = (CFURLRef)[NSURL fileURLWithPath:appPath];
+	
+    LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+    
+	if (loginItems) {
+        if (value) {
+            LSSharedFileListItemRef item = LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemLast, NULL, NULL, appUrl, NULL, NULL);
+            
+            if (item)
+                CFRelease(item);
+        } else {
+            UInt32 seedValue;
+            NSArray* loginItemsArray = (NSArray*)LSSharedFileListCopySnapshot(loginItems, &seedValue);
+            
+            for(int i = 0; i < [loginItemsArray count]; i++){
+                LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)[loginItemsArray objectAtIndex:i];
+                
+                if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &appUrl, NULL) == noErr) {
+                    NSString * urlPath = [(NSURL*)appUrl path];
+                    
+                    if ([urlPath compare:appPath] == NSOrderedSame)
+                        LSSharedFileListItemRemove(loginItems,itemRef);
+                }
+            }
+            
+            [loginItemsArray release];
+        }
+    }
+    
+    CFRelease(loginItems);
+}
+
++ (void)toggleStartAtLogin
+{
+    [LMSettings setStartAtLogin:![LMSettings startAtLogin]];
+}
+
 @end

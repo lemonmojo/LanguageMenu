@@ -25,4 +25,8 @@ static NSString* const PREFKEY_SHOWLANGUAGENAME = @"ShowLanguageName";
 + (void)setShowLanguageName:(BOOL)value;
 + (void)toggleShowLanguageName;
 
++ (BOOL)startAtLogin;
++ (void)setStartAtLogin:(BOOL)value;
++ (void)toggleStartAtLogin;
+
 @end

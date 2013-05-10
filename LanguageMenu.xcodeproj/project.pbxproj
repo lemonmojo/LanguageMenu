@@ -79,7 +79,6 @@
 		E7E3F022170455A10055163E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = LanguageMenu/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		E7E3F024170455B50055163E /* LanguageMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LanguageMenu-Info.plist"; path = "LanguageMenu/LanguageMenu-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E7E3F025170455B50055163E /* LanguageMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LanguageMenu-Prefix.pch"; path = "LanguageMenu/LanguageMenu-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		E7E3F026170455B50055163E /* LanguageMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LanguageMenu.entitlements; path = LanguageMenu/LanguageMenu.entitlements; sourceTree = SOURCE_ROOT; };
 		E7E3F027170455B50055163E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LanguageMenu/main.m; sourceTree = SOURCE_ROOT; };
 		E7E3F028170455C40055163E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LanguageMenu/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E7E3F029170455C40055163E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LanguageMenu/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -206,7 +205,6 @@
 			children = (
 				E7E3F024170455B50055163E /* LanguageMenu-Info.plist */,
 				E7E3F025170455B50055163E /* LanguageMenu-Prefix.pch */,
-				E7E3F026170455B50055163E /* LanguageMenu.entitlements */,
 				E7E3F027170455B50055163E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -421,7 +419,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_ENTITLEMENTS = LanguageMenu/LanguageMenu.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application: Felix Deimel";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LanguageMenu/LanguageMenu-Prefix.pch";
@@ -429,7 +426,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = LanguageMenu;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -438,7 +434,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_ENTITLEMENTS = LanguageMenu/LanguageMenu.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application: Felix Deimel";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LanguageMenu/LanguageMenu-Prefix.pch";
@@ -446,7 +441,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = LanguageMenu;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
