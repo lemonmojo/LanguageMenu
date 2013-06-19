@@ -12,5 +12,5 @@ License
 
 Credits
 -------
-LanguageMenu was created by [Felix Deimel](https://github.com/LemonMojo).</br>
+LanguageMenu was created by [Felix Deimel](https://github.com/LemonMojo).<br />
 You can e-mail me at <felix@lemonmojo.com>.
