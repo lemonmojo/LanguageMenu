@@ -3,7 +3,8 @@
 Summary
 -------
 
-LanguageMenu is a little menu bar application for OS X that let's the user change the current system language.
+LanguageMenu is a little menu bar application for OS X that let's the user change the current system language.<br />
+Prebuilt binaries are available [here](http://www.lemonmojo.com/work).
 
 License
 -------
