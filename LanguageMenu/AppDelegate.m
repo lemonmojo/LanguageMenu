@@ -48,8 +48,10 @@
     NSImage* icon = nil;
     
     if ([LMSettings showCountryFlag] &&
-        [currentLanguage icon])
-        icon = [[currentLanguage icon] resizedImageForSize:NSMakeSize(18, 18)];
+        [currentLanguage icon]) {
+        icon = [[[currentLanguage icon] copy] autorelease];
+        [icon setSize:NSMakeSize(16, 16)];
+    }
     
     if ([LMSettings showCountryFlag] &&
         icon) {
@@ -62,8 +64,9 @@
         [statusItem setLength:NSVariableStatusItemLength];
         [statusItem setTitle:[currentLanguage languageName]];
         
-        if (!icon)
+        if (!icon) {
             [statusItem setImage:nil];
+        }
     }
 }
 
@@ -84,14 +87,18 @@
         
         NSImage* icon = nil;
         
-        if ([language icon])
-            icon = [[language icon] resizedImageForSize:NSMakeSize(18, 18)];
+        if ([language icon]) {
+            icon = [[[language icon] copy] autorelease];
+            [icon setSize:NSMakeSize(16, 16)];
+        }
         
-        if (icon)
+        if (icon) {
             [item setImage:icon];
+        }
         
-        if ([language isActive])
+        if ([language isActive]) {
             [item setState:NSOnState];
+        }
         
         [menu addItem:item];
         [item release];
