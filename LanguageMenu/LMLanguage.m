@@ -93,10 +93,15 @@ NSDictionary* s_languageInputSourceMappings;
         NSMutableDictionary* mappings = [NSMutableDictionary dictionary];
         
         for (NSString* line in lines) {
-            if ([line hasPrefix:@"//"])
+            if ([line hasPrefix:@"//"]) {
                 continue;
+            }
             
             NSArray* pair = [line componentsSeparatedByString:@"="];
+            
+            if (pair.count != 2) {
+                continue;
+            }
             
             NSString* langId = [pair objectAtIndex:0];
             NSString* inSrcId = [pair objectAtIndex:1];
@@ -149,14 +154,16 @@ NSDictionary* s_languageInputSourceMappings;
 
 - (NSImage*)icon
 {
+    NSString* langId = self.canonicalLanguageIdentifier;
+    
     NSDictionary* mappings = [LMLanguage languageInputSourceMappings];
-    NSString* inSrcId = [mappings valueForKey:self.canonicalLanguageIdentifier];
+    NSString* inSrcId = [mappings valueForKey:langId];
     
     NSImage* img = nil;
     
     if (inSrcId &&
         ![inSrcId isEqualToString:@""]) {
-        CFArrayRef inputs = TISCreateInputSourceList(NULL, true);
+        CFArrayRef inputs = TISCreateInputSourceList(nil, YES);
         NSUInteger count = CFArrayGetCount(inputs);
         
         for (NSUInteger i = 0; i < count; i++) {
@@ -165,7 +172,8 @@ NSDictionary* s_languageInputSourceMappings;
             
             if ([inputSourceID isEqualToString:inSrcId]) {
                 IconRef icon = TISGetInputSourceProperty(inputSource, kTISPropertyIconRef);
-                img = [[NSImage alloc] initWithIconRef:icon];
+                img = [[[NSImage alloc] initWithIconRef:icon] autorelease];
+                
                 break;
             }
         }
@@ -173,37 +181,15 @@ NSDictionary* s_languageInputSourceMappings;
         CFRelease(inputs);
     }
     
-    if (!img)
+    if (!img) {
         img = [NSImage imageNamed:inSrcId];
+    }
+    
+    if (!img) {
+        img = [NSImage imageNamed:langId];
+    }
     
     return img;
-    
-    /* CFArrayRef inputs = TISCreateInputSourceList(NULL, true);
-     NSUInteger count = CFArrayGetCount(inputs);
-     
-     for (NSUInteger i = 0; i < count; i++) {
-     TISInputSourceRef inputSource = (TISInputSourceRef)CFArrayGetValueAtIndex(inputs, i);
-     NSString* inputSourceID = TISGetInputSourceProperty(inputSource, kTISPropertyInputSourceID);
-     
-     CFStringRef type = TISGetInputSourceProperty(inputSource, kTISPropertyInputSourceCategory);
-     
-     if (!CFStringCompare(type, kTISCategoryKeyboardInputSource, 0)) {
-     NSArray* langs = TISGetInputSourceProperty(inputSource, kTISPropertyInputSourceLanguages);
-     
-     NSString* name = TISGetInputSourceProperty(inputSource, kTISPropertyLocalizedName);
-     NSString* currLangName = [self languageName];
-     
-     if ([[langs objectAtIndex:0] isEqualToString:canonicalLanguageIdentifier]) {
-     IconRef icon = TISGetInputSourceProperty(inputSource, kTISPropertyIconRef);
-     img = [[NSImage alloc] initWithIconRef:icon];
-     break;
-     }
-     }
-     }
-     
-     CFRelease(inputs);
-     
-     return img; */
 }
 
 @end
