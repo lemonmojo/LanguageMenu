@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NSDictionary* s_languageInputSourceMappings;
-
 @interface LMLanguage : NSObject {
     NSString* languageIdentifier;
     NSString* canonicalLanguageIdentifier;

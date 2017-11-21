@@ -9,6 +9,8 @@
 #import "LMLanguage.h"
 #import <Carbon/Carbon.h>
 
+NSDictionary* s_languageInputSourceMappings;
+
 @implementation LMLanguage
 
 @synthesize languageIdentifier, canonicalLanguageIdentifier;
