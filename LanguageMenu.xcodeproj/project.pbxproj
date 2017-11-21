@@ -63,9 +63,6 @@
 		E723048B170F3C1B0086D5BD /* LMSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSettings.h; path = LanguageMenu/LMSettings.h; sourceTree = SOURCE_ROOT; };
 		E723048C170F3C1B0086D5BD /* LMSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSettings.m; path = LanguageMenu/LMSettings.m; sourceTree = SOURCE_ROOT; };
 		E77E946017045F03006D4AD7 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icon.icns; path = LanguageMenu/Resources/Icon.icns; sourceTree = SOURCE_ROOT; };
-		E79B11FE173CF11C001DED3A /* DmgBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DmgBackground.png; path = LanguageMenu/Resources/DmgBackground.png; sourceTree = SOURCE_ROOT; };
-		E79B1202173CF27E001DED3A /* Disk Image */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Disk Image"; sourceTree = "<group>"; };
-		E79B1204173CF27E001DED3A /* Preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Preview.jpg; sourceTree = "<group>"; };
 		E7A15AFA1FC422C20036DD11 /* en-AT@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "en-AT@2x.png"; path = "LanguageMenu/Resources/Flags/en-AT@2x.png"; sourceTree = SOURCE_ROOT; };
 		E7A15AFB1FC422C20036DD11 /* en-AT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "en-AT.png"; path = "LanguageMenu/Resources/Flags/en-AT.png"; sourceTree = SOURCE_ROOT; };
 		E7B8D9E317011DFA00064048 /* LanguageMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,32 +128,6 @@
 				E7027FC6170F44640012F7C2 /* ID.png */,
 			);
 			name = Flags;
-			sourceTree = "<group>";
-		};
-		E79B1200173CF27E001DED3A /* DmgCanvasTemplate.dmgCanvas */ = {
-			isa = PBXGroup;
-			children = (
-				E79B1201173CF27E001DED3A /* Contents */,
-				E79B1202173CF27E001DED3A /* Disk Image */,
-				E79B1203173CF27E001DED3A /* QuickLook */,
-			);
-			name = DmgCanvasTemplate.dmgCanvas;
-			path = LanguageMenu/Resources/DmgCanvasTemplate.dmgCanvas;
-			sourceTree = SOURCE_ROOT;
-		};
-		E79B1201173CF27E001DED3A /* Contents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Contents;
-			sourceTree = "<group>";
-		};
-		E79B1203173CF27E001DED3A /* QuickLook */ = {
-			isa = PBXGroup;
-			children = (
-				E79B1204173CF27E001DED3A /* Preview.jpg */,
-			);
-			path = QuickLook;
 			sourceTree = "<group>";
 		};
 		E7B8D9DA17011DFA00064048 = {
@@ -226,8 +197,6 @@
 				E7E3F021170455A10055163E /* MainMenu.xib */,
 				E7E3F01E1704559C0055163E /* Credits.rtf */,
 				E7E3F018170455930055163E /* language_mappings.txt */,
-				E79B11FE173CF11C001DED3A /* DmgBackground.png */,
-				E79B1200173CF27E001DED3A /* DmgCanvasTemplate.dmgCanvas */,
 				E7E3F019170455930055163E /* TEMP_KEYLAYOUTS.txt */,
 				E7E3F01A170455930055163E /* TEMP_LANGS.txt */,
 			);
@@ -244,7 +213,6 @@
 				E7B8D9DF17011DFA00064048 /* Sources */,
 				E7B8D9E017011DFA00064048 /* Frameworks */,
 				E7B8D9E117011DFA00064048 /* Resources */,
-				E79B1207173CF306001DED3A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -297,11 +265,11 @@
 				E7027FDE170F48A30012F7C2 /* GL.png in Resources */,
 				E7027FDF170F48A30012F7C2 /* ID.png in Resources */,
 				E7027FE0170F48A30012F7C2 /* IM.png in Resources */,
-				E7A15AFD1FC422C20036DD11 /* en-AT.png in Resources */,
 				E7027FE1170F48A30012F7C2 /* JP.png in Resources */,
 				E7027FE2170F48A30012F7C2 /* LU.png in Resources */,
 				E7027FE3170F48A30012F7C2 /* MY.png in Resources */,
 				E7027FE4170F48A30012F7C2 /* PH.png in Resources */,
+				E7A15AFD1FC422C20036DD11 /* en-AT.png in Resources */,
 				E7A15AFC1FC422C20036DD11 /* en-AT@2x.png in Resources */,
 				E7027FE5170F48A30012F7C2 /* RU.png in Resources */,
 				E7027FE6170F48A30012F7C2 /* RW.png in Resources */,
@@ -314,22 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E79B1207173CF306001DED3A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#/usr/local/bin/dmgcanvas \"$SRCROOT/LanguageMenu/Resources/DmgCanvasTemplate.dmgCanvas\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.dmg\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7B8D9DF17011DFA00064048 /* Sources */ = {
